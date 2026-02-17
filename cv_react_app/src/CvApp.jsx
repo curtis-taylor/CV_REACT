@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function cvReact() {
+function CvApp() {
   const [count, setCount] = useState(0)
 
   return (
@@ -17,7 +17,24 @@ function cvReact() {
         </a>
       </div>
       <h1>CV APP</h1>
-      <input></input>
+      <div id="basic_textfields">
+          <label>Name: </label>
+          <input></input>
+          <label>Email: </label>
+          <input></input>
+          <label>Phone: </label>
+          <input></input>
+      </div>
+      <br></br><br></br>
+      <div id="school_textfields">
+          <label>School: </label>
+          <input></input>
+          <label>Major: </label>
+          <input></input>
+          <label>Completion Date: </label>
+          <input></input>
+      </div>
+      
 
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
@@ -34,4 +51,4 @@ function cvReact() {
   )
 }
 
-export default App
+export default CvApp
