@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import './Components/Button.jsx'
 
 function CvApp() {
   const [count, setCount] = useState(0)
@@ -35,6 +36,10 @@ function CvApp() {
           <input></input>
       </div>
       
+      <div>
+
+        <Button id="submit" text="Submit" color="blue" fontSize={12} textcolor="white"/>
+      </div>
 
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
