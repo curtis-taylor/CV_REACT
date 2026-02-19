@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import './Components/Button.jsx'
+import './Components/Buu.jsx'
 
 function CvApp() {
   const [count, setCount] = useState(0)
@@ -36,10 +37,10 @@ function CvApp() {
           <input></input>
       </div>
       
-      <div>
+      <Buu></Buu>
 
-        <Button id="submit" text="Submit" color="blue" fontSize={12} textcolor="white"/>
-      </div>
+      <Button id="submit" text="Submit" color="blue" fontSize={12} textcolor="white"/>
+      
 
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
