@@ -8,10 +8,12 @@ function Button({id, text, color, fontSize, textcolor}) {
         textcolor: textcolor
     };
 
+    console.log("0000");
+
     return (
-        <>
+        <div>
             <button id={id} style={buttonStyle}>{text}</button> 
-        </>
+        </div>
     );
 }
 

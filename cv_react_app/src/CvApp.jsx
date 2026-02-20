@@ -36,8 +36,6 @@ function CvApp() {
           <label>Completion Date: </label>
           <input></input>
       </div>
-      
-      <Buu></Buu>
 
       <Button id="submit" text="Submit" color="blue" fontSize={12} textcolor="white"/>
       
