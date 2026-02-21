@@ -10,6 +10,7 @@ function CvApp() {
 
   return (
     <>
+       <Button id="submit" text="Submit" color="blue" fontSize={12} textcolor="white"/>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -37,7 +38,7 @@ function CvApp() {
           <input></input>
       </div>
 
-      <Button id="submit" text="Submit" color="blue" fontSize={12} textcolor="white"/>
+     
       
 
       <div className="card">
