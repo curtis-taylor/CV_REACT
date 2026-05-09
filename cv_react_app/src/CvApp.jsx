@@ -3,7 +3,7 @@ import React from 'react';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import './Components/Button.jsx'
+import {Button} from './Components/Button.jsx'
 import './Components/Buu.jsx'
 
 function CvApp() {
@@ -11,7 +11,7 @@ function CvApp() {
 
   return (
     <>
-       <Button id="submit" text="Submit" color="blue" fontSize={12} textcolor="white"/>
+      <Button id="submit" text="Submit" color="pink" fontSize={15} backgroundColor="blue"/>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

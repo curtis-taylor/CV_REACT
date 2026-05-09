@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Button({id, text, color, fontSize, textcolor}) {
+export function Button({id, text, color, fontSize, backgroundColor}) {
 
     const buttonStyle = {
         color: color,
         fontSize: fontSize + "px",
-        textcolor: textcolor
+        backgroundColor: backgroundColor
     };
 
     console.log("0000");
@@ -17,4 +17,4 @@ function Button({id, text, color, fontSize, textcolor}) {
     );
 }
 
-export default Button;
+//export default Button;
