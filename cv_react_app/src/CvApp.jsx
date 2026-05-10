@@ -11,7 +11,7 @@ function CvApp() {
 
   return (
     <>
-      <Button id="submit" text="Submit" color="pink" fontSize={15} backgroundColor="blue"/>
+      
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -20,7 +20,8 @@ function CvApp() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>CV APP</h1>
+      <h1>CV APP</h1><br></br>
+      <h3>General Information</h3>
       <div id="basic_textfields">
           <label>Name: </label>
           <input></input>
@@ -30,6 +31,7 @@ function CvApp() {
           <input></input>
       </div>
       <br></br><br></br>
+      <h3>Education</h3>
       <div id="school_textfields">
           <label>School: </label>
           <input></input>
@@ -39,9 +41,20 @@ function CvApp() {
           <input></input>
       </div>
 
+      <br></br><br></br>
+      <h3>Experience</h3>
+      <div id="school_textfields">
+          <label>Job: </label>
+          <input></input>
+          <label>Start Date: </label>
+          <input></input>
+          <label>End Date: </label>
+          <input></input>
+      </div>
+
      
       
-
+     
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -53,6 +66,7 @@ function CvApp() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+       <Button  id="submit" text="Submit" color="pink" fontSize={15} backgroundColor="blue" onClick={() => {alert("ttt")}}/>
     </>
   )
 }

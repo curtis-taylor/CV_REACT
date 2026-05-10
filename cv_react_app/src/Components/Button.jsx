@@ -2,6 +2,10 @@ import React from 'react';
 
 export function Button({id, text, color, fontSize, backgroundColor}) {
 
+    function handleClick() {
+        alert('You clicked me!');
+    }
+
     const buttonStyle = {
         color: color,
         fontSize: fontSize + "px",
