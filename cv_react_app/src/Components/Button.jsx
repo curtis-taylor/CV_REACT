@@ -2,8 +2,8 @@ import React from 'react';
 
 export function Button({id, text, color, fontSize, backgroundColor}) {
 
-    function handleClick() {
-        alert('You clicked me!');
+    const handleClick = () => {
+        console.log('You clicked me!');
     }
 
     const buttonStyle = {
@@ -12,11 +12,11 @@ export function Button({id, text, color, fontSize, backgroundColor}) {
         backgroundColor: backgroundColor
     };
 
-    console.log("0000");
+    //console.log("0000");
 
     return (
         <div>
-            <button id={id} style={buttonStyle}>{text}</button> 
+            <button onClick={handleClick} id={id} style={buttonStyle}>{text}</button> 
         </div>
     );
 }
