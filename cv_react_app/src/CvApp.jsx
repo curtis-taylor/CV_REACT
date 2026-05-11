@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import {Button} from './Components/Button.jsx'
+import {GeneralSection} from './Components/GeneralSection.jsx'
 import './Components/Buu.jsx'
 
 function CvApp() {
@@ -21,39 +22,9 @@ function CvApp() {
         </a>
       </div>
       <h1>CV APP</h1><br></br>
-      <h3>General Information</h3>
-      <div id="basic_textfields">
-          <label>Name: </label>
-          <input></input>
-          <label>Email: </label>
-          <input></input>
-          <label>Phone: </label>
-          <input></input>
-      </div>
-      <br></br><br></br>
-      <h3>Education</h3>
-      <div id="school_textfields">
-          <label>School: </label>
-          <input></input>
-          <label>Major: </label>
-          <input></input>
-          <label>Completion Date: </label>
-          <input></input>
-      </div>
-
-      <br></br><br></br>
-      <h3>Experience</h3>
-      <div id="school_textfields">
-          <label>Job: </label>
-          <input></input>
-          <label>Start Date: </label>
-          <input></input>
-          <label>End Date: </label>
-          <input></input>
-      </div>
-
-     
       
+      <GeneralSection/>
+
      
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
