@@ -13,6 +13,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#section1 {
+  background-color:navy;
+}
+
+#section2 {
+  background-color:navy;
+}
+
+#section3 {
+  background-color:navy;
+}
+
 a {
   font-weight: 500;
   color: #646cff;

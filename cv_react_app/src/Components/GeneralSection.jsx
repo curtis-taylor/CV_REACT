@@ -1,39 +1,28 @@
 import React from 'react'
 
-export function GeneralSection() {
+export function GeneralSection(props) {
     return (
-        <div>
-            <h3>General Information</h3>
-            <div id="basic_textfields">
-                <label>Name: </label>
-                <input></input>
-                <label>Email: </label>
-                <input></input>
-                <label>Phone: </label>
-                <input></input>
+        <div >
+            <h3>{props.title}</h3>
+            <div id={props.id}>
+                <div className='field'>
+                    <label>{props.field1}: </label>
+                    <input></input> 
+                </div>
+                <br></br>
+                <div className='field'>
+                    <label>{props.field2}: </label>
+                    <input></input>
+                </div>
+                <br></br>
+                <div className='field'>
+                    <label>{props.field3}: </label>
+                    <input></input>
+                </div>
             </div>
             
             <br></br><br></br>
-            <h3>Education</h3>
-            <div id="school_textfields">
-                <label>School: </label>
-                <input></input>
-                <label>Major: </label>
-                <input></input>
-                <label>Completion Date: </label>
-                <input></input>
-            </div>
-    
-            <br></br><br></br>
-            <h3>Experience</h3>
-            <div id="school_textfields">
-                <label>Job: </label>
-                <input></input>
-                <label>Start Date: </label>
-                <input></input>
-                <label>End Date: </label>
-                <input></input>
-            </div>
+            
       </div>
 
     );

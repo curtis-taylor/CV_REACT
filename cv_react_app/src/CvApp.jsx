@@ -23,9 +23,10 @@ function CvApp() {
       </div>
       <h1>CV APP</h1><br></br>
       
-      <GeneralSection/>
+      <GeneralSection id="section1" title="General Info" field1="Name" field2="Email" field3="Phone" />
+      <GeneralSection id="section2" title="Education" field1="School" field2="Major" field3="Completion Date" />
+      <GeneralSection id="section3" title="Experience" field1="Job" field2="Start Date" field3="End Date" />
 
-     
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
