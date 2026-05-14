@@ -23,9 +23,9 @@ function CvApp() {
       </div>
       <h1>CV APP</h1><br></br>
       
-      <GeneralSection id="section1" title="General Info" field1="Name" field2="Email" field3="Phone" />
-      <GeneralSection id="section2" title="Education" field1="School" field2="Major" field3="Completion Date" />
-      <GeneralSection id="section3" title="Experience" field1="Job" field2="Start Date" field3="End Date" />
+      <GeneralSection className="section" title="General Info" field1="Name" field2="Email" field3="Phone" />
+      <GeneralSection className="section" title="Education" field1="School" field2="Major" field3="Completion Date" />
+      <GeneralSection className="section" title="Experience" field1="Job" field2="Start Date" field3="End Date" />
 
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
@@ -38,7 +38,9 @@ function CvApp() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-       <Button  id="submit" text="Submit" color="pink" fontSize={15} backgroundColor="blue" onClick={() => {alert("ttt")}}/>
+      <div>
+        <Button/>
+      </div>
     </>
   )
 }

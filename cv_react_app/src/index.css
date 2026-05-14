@@ -13,16 +13,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-#section1 {
+.section {
   background-color:navy;
 }
 
-#section2 {
-  background-color:navy;
-}
 
-#section3 {
-  background-color:navy;
+.buttonContainer button {
+  margin: 20px;
 }
 
 a {

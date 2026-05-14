@@ -4,7 +4,7 @@ export function GeneralSection(props) {
     return (
         <div >
             <h3>{props.title}</h3>
-            <div id={props.id}>
+            <div className={props.className}>
                 <div className='field'>
                     <label>{props.field1}: </label>
                     <input></input> 
