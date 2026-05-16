@@ -2,7 +2,7 @@ import React from 'react'
 
 export function GeneralSection(props) {
     return (
-        <div >
+        <form >
             <h3>{props.title}</h3>
             <div className={props.className}>
                 <div className='field'>
@@ -23,7 +23,7 @@ export function GeneralSection(props) {
             
             <br></br><br></br>
             
-      </div>
+      </form>
 
     );
 }
