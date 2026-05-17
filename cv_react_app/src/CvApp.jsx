@@ -9,6 +9,7 @@ import './Components/Buu.jsx'
 
 function CvApp() {
   const [count, setCount] = useState(0)
+  const [cvText, setCVText] = useState[""];
 
   return (
     <>
@@ -23,6 +24,7 @@ function CvApp() {
       </div>
       <h1>CV APP</h1><br></br>
       
+      <form>
       <GeneralSection className="section" title="General Info" field1="Name" field2="Email" field3="Phone" />
       <GeneralSection className="section" title="Education" field1="School" field2="Major" field3="Completion Date" />
       <GeneralSection className="section" title="Experience" field1="Job" field2="Start Date" field3="End Date" />
@@ -41,6 +43,7 @@ function CvApp() {
       <div>
         <Button/>
       </div>
+      </form>
     </>
   )
 }
