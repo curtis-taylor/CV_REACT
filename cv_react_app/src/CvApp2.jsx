@@ -18,7 +18,7 @@ function CvApp2() {
 
 
     const [count, setCount] = useState(0)
-    //const [cvText, setCVText] = useState("");
+    const [cvText, setCVText] = useState("");
 
     const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,13 +26,12 @@ function CvApp2() {
     let info = [name, email, phone, school, major, dateComplete]
     alert(`Hello, ${info}`);
 
-    return (
-      <h1>TTTEYWTEYT</h1>
-    )
+    setCVText(info);
+
   };
 
     return (
-
+    <>
     <form onSubmit={handleSubmit}>
       <div>
         <div className='section'>
@@ -80,6 +79,12 @@ function CvApp2() {
       <button type="submit">Submit</button>
       <button type="submit">Edit</button>
     </form>
+
+      <h2>Submitted text:</h2>
+      <p>{cvText}</p>
+    </>
+
+
 
 
     )
