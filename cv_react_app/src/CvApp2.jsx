@@ -23,7 +23,7 @@ function CvApp2() {
     const handleSubmit = (e) => {
     e.preventDefault();
     
-    let info = [name, email, phone, school, major, dateComplete]
+    let info = [ name, email, phone, school, major, dateComplete]
     alert(`Hello, ${info}`);
 
     setCVText(info);
@@ -81,6 +81,7 @@ function CvApp2() {
     </form>
 
       <h2>Submitted text:</h2>
+    
       <p>{cvText}</p>
     </>
 
