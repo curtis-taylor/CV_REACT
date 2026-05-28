@@ -74,6 +74,7 @@ function CvApp2() {
               placeholder="Enter completion date"
             /> 
         </div>
+        
       </div>
       <br></br>
       <button type="submit">Submit</button>
