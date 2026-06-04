@@ -16,6 +16,10 @@ function CvApp2() {
     const [major, setMajor] = useState('')
     const [dateComplete, setDateComplete] = useState('')
 
+    const [company, setCompany] = useState('')
+    const [position, setPosition] = useState('')
+    const [tasks, setTasks] = useState('')
+
 
     const [count, setCount] = useState(0)
     const [cvText, setCVText] = useState("");
@@ -23,7 +27,7 @@ function CvApp2() {
     const handleSubmit = (e) => {
     e.preventDefault();
     
-    let info = [ name, email, phone, school, major, dateComplete]
+    let info = [ "CV INFO", name, email, phone, school, major, dateComplete, company, position, tasks]
     alert(`Hello, ${info}`);
 
     setCVText(info);
@@ -74,16 +78,78 @@ function CvApp2() {
               placeholder="Enter completion date"
             /> 
         </div>
+
+        <div className='section'>
+            <input
+              type="text"
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
+              placeholder="Enter Company Name"
+            /> 
+            <input
+              type="text"
+              value={position}
+              onChange={(e) => setPosition(e.target.value)}
+              placeholder="Enter Company position title"
+            /> 
+            <input
+              type="text"
+              value={tasks}
+              onChange={(e) => setTasks(e.target.value)}
+              placeholder="Enter position Responsibilities"
+            /> 
+        </div>
         
       </div>
       <br></br>
       <button type="submit">Submit</button>
       <button type="submit">Edit</button>
     </form>
+      
+      <div>
+        <div>
+          <h1> {cvText[0]} </h1>
+        </div>
+        
+        <div>
+            <p> Name: {cvText[1]} </p>
+        </div>
+        <div>
+            <p> EMAIL: {cvText[2]} </p>
+        </div>
+        <div>
+            <p> PHONE: {cvText[3]} </p>
+        </div>
+      </div>
+      <br></br>
 
-      <h2>Submitted text:</h2>
-    
-      <p>{cvText}</p>
+      <div>
+         <div>
+            <p> School Name: {cvText[4]} </p>
+        </div>
+        <div>
+            <p> Major: {cvText[5]} </p>
+        </div>
+        <div>
+            <p> Date Completed: {cvText[6]} </p>
+        </div>
+
+      </div>
+
+      <br></br>
+
+      <div>
+         <div>
+            <p> <b>Company Name:</b> {cvText[7]} </p>
+        </div>
+        <div>
+            <p> <b>Position Title:</b> {cvText[8]} </p>
+        </div>
+        <div>
+            <p> Position Tasks and Responsibilities: {cvText[9]} </p>
+        </div>
+
+      </div>
     </>
 
 
