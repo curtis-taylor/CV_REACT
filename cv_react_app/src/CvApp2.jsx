@@ -27,7 +27,7 @@ function CvApp2() {
     const handleSubmit = (e) => {
     e.preventDefault();
     
-    let info = [ "CV INFO", name, email, phone, school, major, dateComplete, company, position, tasks]
+    let info = [ name, email, phone, school, major, dateComplete, company, position, tasks]
     alert(`Hello, ${info}`);
 
     setCVText(info);
@@ -107,46 +107,41 @@ function CvApp2() {
     </form>
       
       <div>
-        <div>
-          <h1> {cvText[0]} </h1>
-        </div>
         
-        <div>
-            <p> Name: {cvText[1]} </p>
-        </div>
-        <div>
-            <p> EMAIL: {cvText[2]} </p>
-        </div>
-        <div>
-            <p> PHONE: {cvText[3]} </p>
-        </div>
+          <h1> {cvText[0]} </h1>
+          <span> {cvText[1]} </span>
+          <span>{cvText[2]} </span>
+        
+        
+        
+       
       </div>
-      <br></br>
+      <br></br><br></br>
 
       <div>
          <div>
-            <p> School Name: {cvText[4]} </p>
+            <span> <b>School Name: </b> {cvText[3]} </span>
         </div>
         <div>
-            <p> Major: {cvText[5]} </p>
+            <span> <b>Major:</b> {cvText[4]} </span>
         </div>
         <div>
-            <p> Date Completed: {cvText[6]} </p>
+            <span> <b>Date Completed:</b> {cvText[5]} </span>
         </div>
 
       </div>
 
-      <br></br>
+      <br></br><br></br>
 
       <div>
          <div>
-            <p> <b>Company Name:</b> {cvText[7]} </p>
+            <span> <b>Company Name:</b> {cvText[6]} </span>
         </div>
         <div>
-            <p> <b>Position Title:</b> {cvText[8]} </p>
+            <span> <b>Position Title:</b> {cvText[7]} </span>
         </div>
         <div>
-            <p> Position Tasks and Responsibilities: {cvText[9]} </p>
+            <span> <b>Position Tasks and Responsibilities:</b> {cvText[9]} </span>
         </div>
 
       </div>
