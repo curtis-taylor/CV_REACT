@@ -22,17 +22,24 @@ function CvApp2() {
 
 
     const [count, setCount] = useState(0)
+
+    const [isFormVisible, setFormVisible] = useState(true)
+    const [isSubmitVisible, setSubmitVisible] = useState(false)
+    const [isEditVisible, setEditVisible] = useState(false)
+
     const [cvText, setCVText] = useState("");
 
     const handleSubmit = (e) => {
-    e.preventDefault();
+      e.preventDefault();
+      
+      let info = [ name, email, phone, school, major, dateComplete, company, position, tasks]
+      alert(`Hello, ${info}`);
+
+      setCVText(info);
+
+    };
+
     
-    let info = [ name, email, phone, school, major, dateComplete, company, position, tasks]
-    alert(`Hello, ${info}`);
-
-    setCVText(info);
-
-  };
 
     return (
     <>
