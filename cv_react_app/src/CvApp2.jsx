@@ -37,12 +37,16 @@ function CvApp2() {
 
       setCVText(info);
 
+      setFormVisible(!isFormVisible);
+
     };
 
     
 
     return (
     <>
+
+    {isFormVisible ? 
     <form onSubmit={handleSubmit}>
       <div>
         <div className='section'>
@@ -110,8 +114,14 @@ function CvApp2() {
       </div>
       <br></br>
       <button type="submit">Submit</button>
-      <button type="submit">Edit</button>
+
+      
+      <button type="button">Edit</button>
     </form>
+
+    : null}
+
+    
       
       <div>
         
