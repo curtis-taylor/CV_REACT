@@ -24,8 +24,9 @@ function CvApp2() {
     const [count, setCount] = useState(0)
 
     const [isFormVisible, setFormVisible] = useState(true)
-    const [isSubmitVisible, setSubmitVisible] = useState(false)
+    const [isSubmitVisible, setSubmitVisible] = useState(true)
     const [isEditVisible, setEditVisible] = useState(false)
+    const [isOutputVisible, setOutputVisible] = useState(false)
 
     const [cvText, setCVText] = useState("");
 
@@ -38,6 +39,20 @@ function CvApp2() {
       setCVText(info);
 
       setFormVisible(!isFormVisible);
+      setSubmitVisible(!isSubmitVisible);
+      setEditVisible(!isEditVisible);
+      setOutputVisible(!isOutputVisible);
+
+    };
+
+    const handleEdit = (e) => {
+      e.preventDefault();
+
+      setFormVisible(true);
+      setSubmitVisible(true);
+      setEditVisible(false);
+
+      setOutputVisible(false);
 
     };
 
@@ -112,25 +127,26 @@ function CvApp2() {
         </div>
         
       </div>
+
       <br></br>
-      <button type="submit">Submit</button>
 
       
-      <button type="button">Edit</button>
+
+      {isSubmitVisible ? 
+      <button type="submit">Submit</button> : null }
+
+      
     </form>
 
     : null}
 
-    
-      
+    {isOutputVisible ? 
+    <div id="output">
       <div>
         
           <h1> {cvText[0]} </h1>
           <span> {cvText[1]} </span>
           <span>{cvText[2]} </span>
-        
-        
-        
        
       </div>
       <br></br><br></br>
@@ -158,10 +174,15 @@ function CvApp2() {
             <span> <b>Position Title:</b> {cvText[7]} </span>
         </div>
         <div>
-            <span> <b>Position Tasks and Responsibilities:</b> {cvText[9]} </span>
+            <span> <b>Position Tasks and Responsibilities:</b> {cvText[8]} </span>
         </div>
 
       </div>
+    </div> :null}
+
+       {isEditVisible ?
+      <button onClick={handleEdit}>Edit</button> : null}
+      
     </>
 
 
