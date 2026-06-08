@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import {Button} from './Components/Button.jsx'
+import { Button2 } from './Components/Button2.jsx';
 import {GeneralSection} from './Components/GeneralSection.jsx'
 import './Components/Buu.jsx'
 
@@ -134,7 +135,18 @@ function CvApp2() {
 
       {isSubmitVisible ? 
       <button type="submit">Submit</button> : null }
+      
+      {isSubmitVisible ?
+        <Button2
+          id={'submit'}
+          text={'Submit2'}
+          color={'white'}
+          fontSize={'23px'}
+          backgroundColor={'blue'}
 
+        
+        /> : null
+       }
       
     </form>
 
