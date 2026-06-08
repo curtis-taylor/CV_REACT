@@ -3,14 +3,14 @@ import React from 'react';
 export function Button2({id, text, color, fontSize, backgroundColor}) {
 
     const submitClick = () => {
-        console.log('You clicked button!');
+        console.log('You clicked button!' + backgroundColor);
     }
 
 
     const submitStyle = {
-        color: 'blue',
-        fontSize: {fontSize},
-        backgroundColor: {backgroundColor}
+        color: color,
+        fontSize: fontSize,
+        backgroundColor: backgroundColor
     };
 
     const editStyle = {

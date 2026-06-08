@@ -1,15 +1,11 @@
-import { useState } from 'react'
-import React from 'react';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import {Button} from './Components/Button.jsx'
-import { Button2 } from './Components/Button2.jsx';
-import { Form } from './Components/Form.jsx';
-import {GeneralSection} from './Components/GeneralSection.jsx'
-import './Components/Buu.jsx'
+import React from "react"
+import { useState } from "react"
+import { Button2 } from "./Button2"
 
-function CvApp2() {
+
+
+
+export function Form() {
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -21,9 +17,6 @@ function CvApp2() {
     const [company, setCompany] = useState('')
     const [position, setPosition] = useState('')
     const [tasks, setTasks] = useState('')
-
-
-    const [count, setCount] = useState(0)
 
     const [isFormVisible, setFormVisible] = useState(true)
     const [isSubmitVisible, setSubmitVisible] = useState(true)
@@ -47,26 +40,9 @@ function CvApp2() {
 
     };
 
-    const handleEdit = (e) => {
-      e.preventDefault();
-
-      setFormVisible(true);
-      setSubmitVisible(true);
-      setEditVisible(false);
-
-      setOutputVisible(false);
-
-    };
-
-    
-
     return (
-    <>
 
-    {/*
-
-    {isFormVisible ? 
-    <form onSubmit={handleSubmit}>
+     <form onSubmit={handleSubmit}>
       <div>
         <div className='section'>
             <input
@@ -148,62 +124,8 @@ function CvApp2() {
        }
       
     </form>
-
-    : null}
-    */}
-
-    {isFormVisible ? 
-    <Form/> : null}
-
-    {isOutputVisible ? 
-    <div id="output">
-      <div>
         
-          <h1> {cvText[0]} </h1>
-          <span> {cvText[1]} </span>
-          <span>{cvText[2]} </span>
-       
-      </div>
-      <br></br><br></br>
+    );
 
-      <div>
-         <div>
-            <span> <b>School Name: </b> {cvText[3]} </span>
-        </div>
-        <div>
-            <span> <b>Major:</b> {cvText[4]} </span>
-        </div>
-        <div>
-            <span> <b>Date Completed:</b> {cvText[5]} </span>
-        </div>
-
-      </div>
-
-      <br></br><br></br>
-
-      <div>
-         <div>
-            <span> <b>Company Name:</b> {cvText[6]} </span>
-        </div>
-        <div>
-            <span> <b>Position Title:</b> {cvText[7]} </span>
-        </div>
-        <div>
-            <span> <b>Position Tasks and Responsibilities:</b> {cvText[8]} </span>
-        </div>
-
-      </div>
-    </div> :null}
-
-       {isEditVisible ?
-      <button onClick={handleEdit}>Edit</button> : null}
-      
-    </>
-
-
-
-
-    )
 }
 
-export default CvApp2
