@@ -110,8 +110,6 @@ export function Form() {
 
       <br></br>
 
-      
-      {isSubmitVisible ?
         <Button2
           id={'submit'}
           text={'Submit'}
@@ -121,7 +119,7 @@ export function Form() {
 
         
         /> : null
-       }
+       
       
     </form>
         
