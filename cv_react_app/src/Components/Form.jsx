@@ -7,6 +7,7 @@ import { Button2 } from "./Button2"
 
 export function Form() {
 
+  
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
@@ -38,7 +39,7 @@ export function Form() {
       setEditVisible(!isEditVisible);
       setOutputVisible(!isOutputVisible);
 
-    };
+    }; 
 
     return (
 
