@@ -93,6 +93,8 @@ export function Form() {
               onChange={(e) => setMajor(e.target.value)}
               placeholder="Enter your School Major"
             /> 
+            <br></br>
+            <label>Course Complete Date</label>
             <input
               type="date"
               value={dateComplete}
@@ -114,6 +116,8 @@ export function Form() {
               onChange={(e) => setPosition(e.target.value)}
               placeholder="Enter Company position title"
             /> 
+            <br></br>
+            <label>Job Start Date</label>
              <input
               type="date"
               value={jobStart}
