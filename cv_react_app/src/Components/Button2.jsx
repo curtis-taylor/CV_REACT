@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Button2({id, text, color, fontSize, backgroundColor}) {
+export function Button2({onClick, id, text, color, fontSize, backgroundColor}) {
 
     const submitClick = () => {
         console.log('You clicked button!' + backgroundColor);
@@ -23,7 +23,7 @@ export function Button2({id, text, color, fontSize, backgroundColor}) {
 
     return (
         <div className='buttonContainer'>
-            <button onClick={submitClick} id={id} style={submitStyle}>{text}</button>
+            <button onClick={onClick} id={id} style={submitStyle}>{text}</button>
         </div>
     );
 }

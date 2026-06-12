@@ -11,6 +11,7 @@ import './Components/Buu.jsx'
 
 function CvApp2() {
 
+    
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
@@ -56,7 +57,7 @@ function CvApp2() {
 
       setOutputVisible(false);
 
-    };
+    }; 
 
     
 
@@ -152,10 +153,11 @@ function CvApp2() {
     : null}
     */}
 
-    {isFormVisible ? 
-    <Form/> : null}
+  
+    <Form/> 
 
-    {isOutputVisible ? 
+
+{/*}    {isOutputVisible ? 
     <div id="output">
       <div>
         
@@ -198,6 +200,7 @@ function CvApp2() {
        {isEditVisible ?
       <button onClick={handleEdit}>Edit</button> : null}
       
+      */}
     </>
 
 
