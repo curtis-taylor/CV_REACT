@@ -22,9 +22,6 @@ export function Form() {
     const [jobStart, setJobStart] = useState('');
 
     const [isFormVisible, setFormVisible] = useState(true)
-    //const [isSubmitVisible, setSubmitVisible] = useState(true)
-    //const [isEditVisible, setEditVisible] = useState(false)
-    //const [isOutputVisible, setOutputVisible] = useState(false)
 
     const [cvText, setCVText] = useState("");
 
@@ -32,14 +29,12 @@ export function Form() {
       e.preventDefault();
       
       let info = [ name, email, phone, school, major, dateComplete, company, position, tasks, jobStart]
-      alert(`Hello, ${info}`);
+      //alert(`Hello, ${info}`);
 
       setCVText(info);
 
       setFormVisible(!isFormVisible);
-      //setSubmitVisible(!isSubmitVisible);
-      //setEditVisible(!isEditVisible);
-      //setOutputVisible(!isOutputVisible);
+
 
     }; 
 
@@ -156,12 +151,11 @@ export function Form() {
     return(
 
       <div id="output">
-      <div>
+        <u><h1> {cvText[0]} </h1></u>
+      <div id="contactContainer">
         
-          <u><h1> {cvText[0]} </h1></u>
-          
-          <span> {cvText[1]} </span>
-          <span>{cvText[2]} </span>
+          <span id="email"><h3> {cvText[1]} </h3></span>
+          <span id="phone"> <h3>#{cvText[2]} </h3> </span>
        
       </div>
       <br></br><br></br>

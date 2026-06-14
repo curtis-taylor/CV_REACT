@@ -20,6 +20,17 @@ textarea {
   min-width: 80%;
 }
 
+#output {
+  min-width: 640px;
+  background-color:navy
+}
+
+#contactContainer {
+   display: inline-grid;
+   grid-auto-flow: column;
+  gap: 100px;
+}
+
 .section {
   background-color:navy;
   border: 10px solid lemonchiffon;
@@ -28,6 +39,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: start;
+  min-width: 320px;
 
 }
 
