@@ -21,8 +21,10 @@ textarea {
 }
 
 #output {
+  color: #555555;
   min-width: 640px;
-  background-color:navy
+  background-color:white;
+  
 }
 
 #contactContainer {
