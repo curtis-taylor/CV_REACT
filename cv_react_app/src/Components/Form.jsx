@@ -28,6 +28,10 @@ export function Form() {
 
     const handleSubmit = (e) => {
       e.preventDefault();
+
+      setTasks(tasks.split('*'))
+
+      console.log(tasks)
       
       let info = [ name, email, phone, school, major, dateComplete, company, position, tasks, jobStart, location]
       //alert(`Hello, ${info}`);
@@ -131,7 +135,7 @@ export function Form() {
               type="text"
               value={tasks}
               onChange={(e) => setTasks(e.target.value)}
-              placeholder="Enter position Responsibilities. Use '-' hyphen before every bullet point."
+              placeholder="Enter position Responsibilities. Use '*' star before every bullet point."
             /> 
 
         </div>
