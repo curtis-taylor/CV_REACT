@@ -16,6 +16,10 @@ textarea {
   color: #111827;
 }
 
+textarea {
+  white-space: pre-wrap;
+}
+
 #formContainer {
   min-width: 80%;
 }

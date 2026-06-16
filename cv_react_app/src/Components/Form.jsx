@@ -131,7 +131,7 @@ export function Form() {
               type="text"
               value={tasks}
               onChange={(e) => setTasks(e.target.value)}
-              placeholder="Enter position Responsibilities"
+              placeholder="Enter position Responsibilities. Use '-' hyphen before every bullet point."
             /> 
 
         </div>
