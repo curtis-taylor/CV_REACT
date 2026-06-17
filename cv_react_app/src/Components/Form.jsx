@@ -28,10 +28,6 @@ export function Form() {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-
-      setTasks(tasks.split('*'))
-
-      console.log(tasks)
       
       let info = [ name, email, phone, school, major, dateComplete, company, position, tasks, jobStart, location]
       //alert(`Hello, ${info}`);
@@ -47,10 +43,7 @@ export function Form() {
       e.preventDefault();
 
       setFormVisible(true);
-      //setSubmitVisible(true);
-      //setEditVisible(false);
-
-      //setOutputVisible(false);
+  
 
     };
 
@@ -135,7 +128,7 @@ export function Form() {
               type="text"
               value={tasks}
               onChange={(e) => setTasks(e.target.value)}
-              placeholder="Enter position Responsibilities. Use '  ' double space after every task list item."
+              placeholder="Enter position Responsibilities. Use '-' hyphen to text so the text can be seperated into bullet points statements."
             /> 
 
         </div>
@@ -162,63 +155,65 @@ export function Form() {
 
     return(
 
-      
-
+      <>
       <div id="output">
+        <br></br>
         <u><h1> {cvText[0]} </h1></u>
-      <div id="contactContainer">
+        <div id="contactContainer">
+          
+            <span id="email"><h3> {cvText[1]} </h3></span>
+            <span id="phone"> <h3> {cvText[2]} </h3> </span>
         
-          <span id="email"><h3> {cvText[1]} </h3></span>
-          <span id="phone"> <h3>#{cvText[2]} </h3> </span>
-       
+        </div>
+        <br></br><br></br>
+
+        <div>
+          <div><h2><u>EDUCATION</u></h2></div>
+          <div>
+              <span>  <i> {cvText[3]} </i> </span>
+          </div>
+          <div>
+              <span> <b>{cvText[4]} </b>  </span>
+          </div>
+          <div>
+              <span>  {cvText[5]} </span>
+          </div>
+
+        </div>
+
+        <br></br><br></br>
+
+        <div>
+          <div><h2><u>EXPERIENCE</u></h2></div>
+          <div>
+              <span> <b>{cvText[7]} </b></span>
+          </div>
+          <div>
+              <span> <i>{cvText[6]}</i>, {cvText[10]} ({cvText[9]}) </span>
+          </div>
+          
+          <div>
+              <ul> {cvText[8].split('-').map((c) => (
+                <li key={c}> {c} </li>
+                
+              )) } </ul>
+          </div>
+
       </div>
       <br></br><br></br>
+     
+    </div>
 
-      <div>
-         <div><h2><u>EDUCATION</u></h2></div>
-         <div>
-            <span> <b>School Name: </b> <i> {cvText[3]} </i> </span>
-        </div>
-        <div>
-            <span> <b>Major:</b> {cvText[4]} </span>
-        </div>
-        <div>
-            <span> <b>Date Completed:</b> {cvText[5]} </span>
-        </div>
-
-      </div>
-
-      <br></br><br></br>
-
-      <div>
-         <div><h2><u>EXPERIENCE</u></h2></div>
-         <div>
-            <span> <b>{cvText[7]} </b></span>
-        </div>
-         <div>
-            <span> <i>{cvText[6]}</i>, {cvText[10]} ({cvText[9]}) </span>
-        </div>
-        
-        <div>
-            <ul> {cvText[8].split('  ').map((c) => (
-               <li> {c} </li>
-              
-            )) } </ul>
-        </div>
-
-      </div>
-
-      <Button2
+     <Button2
         onClick = {handleEdit}
           id={'editButton'}
           text={'Edit'}
           color={'white'}
           fontSize={'15px'}
           backgroundColor={'green'}
-
-        
+ 
         />
-    </div>
+    </>
 
     ); 
 
