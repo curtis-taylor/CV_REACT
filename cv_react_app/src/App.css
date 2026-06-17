@@ -20,6 +20,11 @@ textarea {
   white-space: pre-wrap;
 }
 
+ul {
+    text-align: left;
+    list-style-position: inside;
+}
+
 #formContainer {
   min-width: 80%;
 }

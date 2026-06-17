@@ -135,7 +135,7 @@ export function Form() {
               type="text"
               value={tasks}
               onChange={(e) => setTasks(e.target.value)}
-              placeholder="Enter position Responsibilities. Use '*' star before every bullet point."
+              placeholder="Enter position Responsibilities. Use '  ' double space after every task list item."
             /> 
 
         </div>
@@ -161,6 +161,8 @@ export function Form() {
     ); }
 
     return(
+
+      
 
       <div id="output">
         <u><h1> {cvText[0]} </h1></u>
@@ -198,7 +200,10 @@ export function Form() {
         </div>
         
         <div>
-            <span> <b>Position Tasks and Responsibilities:</b> {cvText[8]} </span>
+            <ul> {cvText[8].split('  ').map((c) => (
+               <li> {c} </li>
+              
+            )) } </ul>
         </div>
 
       </div>
