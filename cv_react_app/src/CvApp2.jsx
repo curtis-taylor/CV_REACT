@@ -11,7 +11,7 @@ function CvApp2() {
 
     return (
     <>
-
+    <h1 id="title"> CV Resume Builder</h1>
     <Form/> 
 
 

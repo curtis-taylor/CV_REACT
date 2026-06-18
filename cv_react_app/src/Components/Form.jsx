@@ -124,11 +124,14 @@ export function Form() {
               placeholder="Enter Job Start Date"
             /> 
 
+            <br></br>
+            <label>Job Tasks</label>
             <textarea
               type="text"
               value={tasks}
               onChange={(e) => setTasks(e.target.value)}
               placeholder="Enter position Responsibilities. Use '-' hyphen to text so the text can be seperated into bullet points statements."
+              rows={5}
             /> 
 
         </div>

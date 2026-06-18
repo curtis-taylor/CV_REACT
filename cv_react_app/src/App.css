@@ -16,10 +16,6 @@ textarea {
   color: #111827;
 }
 
-textarea {
-  white-space: pre-wrap;
-}
-
 ul {
     text-align: left;
     list-style-position: inside;
