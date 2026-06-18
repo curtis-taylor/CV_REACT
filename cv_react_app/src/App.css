@@ -27,6 +27,8 @@ ul {
 
 #formContainer {
   min-width: 80%;
+  border: 4px solid lemonchiffon;
+  border-radius: 10px;
 }
 
 #output {
@@ -51,6 +53,7 @@ ul {
   flex-direction: column;
   align-items: start;
   min-width: 320px;
+
 
 }
 
