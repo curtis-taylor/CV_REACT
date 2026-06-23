@@ -21,6 +21,7 @@ export function Form() {
     const [position, setPosition] = useState('')
     const [tasks, setTasks] = useState('')
     const [jobStart, setJobStart] = useState('');
+    const [jobEnd, setJobEnd] = useState('');
 
     const [isFormVisible, setFormVisible] = useState(true)
 
@@ -29,7 +30,7 @@ export function Form() {
     const handleSubmit = (e) => {
       e.preventDefault();
       
-      let info = [ name, email, phone, school, major, dateComplete, company, position, tasks, jobStart, location]
+      let info = [ name, email, phone, school, major, dateComplete, company, position, tasks, jobStart, location, jobEnd]
       //alert(`Hello, ${info}`);
 
       setCVText(info);
@@ -123,6 +124,13 @@ export function Form() {
               onChange={(e) => setJobStart(e.target.value)}
               placeholder="Enter Job Start Date"
             /> 
+            <label>Job End Date</label>
+             <input
+              type="date"
+              value={jobEnd}
+              onChange={(e) => setJobEnd(e.target.value)}
+              placeholder="Enter Job End Date if Applicable"
+            /> 
 
             <br></br>
             <label>Job Tasks</label>
@@ -189,10 +197,10 @@ export function Form() {
         <div>
           <div><h2><u>EXPERIENCE</u></h2></div>
           <div>
-              <span> <b>{cvText[7]} </b></span>
+              <span> <b>{cvText[7]} </b> <i>({cvText[9]}    &#8658;   {cvText[11]})</i> </span>
           </div>
           <div>
-              <span> <i>{cvText[6]}</i>, {cvText[10]} ({cvText[9]}) </span>
+              <span> <i>{cvText[6]}</i>, {cvText[10]}  </span>
           </div>
           
           <div>
